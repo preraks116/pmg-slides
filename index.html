@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" href="reveal.js/css/reveal.css" />
+    <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+
+  <body>
+    <script type="text/javascript" src="js/d3.v3.min.js"></script>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Procedural Content Generation</h1>
+          <p style="font-size: 48px">Prerak Srivastava</p>
+          <p>2020111013</p>
+        </section>
+        <!-- ################################################### -->
+        <!-- ################################################### -->
+        <section data-auto-animate>
+          <h3 style="font-weight: bold">Introduction</h3>
+          <p style="text-align: left; font-weight: bold">
+            <br />
+            • Procedural Content Generation is the automated
+                      algorithmic generation of game content.
+            <br /><br />
+            • The PCG can be multi-level and the content that it can
+               generate can vary from <br />
+            <br />
+              - Level Design <br />
+              - Gameplay <br />
+              - Story<br />
+              - Characters<br />
+              - Items<br />
+              - World<br />
+            <br /><br />
+          </p>
+        </section>
+        <section>
+          <h1>Procedural Maze Generation</h1>
+        </section>
+        <section>
+          <h3 style="font-weight: bold">Objective of the Project</h3>
+          <p style="text-align: left; font-weight: bold">
+            <br />
+            • To create a simple maze generating application/game. <br /><br />
+            • To be able to use different kinds of algorithms can be 
+              used to generate the maze. <br /><br />
+            • To be able to replay old mazes using seeds.<br /><br />
+            • To be able quantify "difficulty" of any given maze.<br /><br />
+            • Allow user to check their performance on solving the 
+                maze using parameters like path, time taken and 
+                      difficulty/complexity of the maze.<br /><br />
+          </p>
+        </section>
+        <section>
+          <h3 style="font-weight: bold">Methodology</h3>
+          <p style="text-align: left; font-weight: bold">
+            <br />
+            • Creating a physics based game using ThreeJS and
+                       CannonJS <br /><br />
+            • Created custom Object Oriented JS Wrappers.<br /><br />
+            • Different algorithms output the structure of the maze 
+                in a common format<br /><br />
+            • As the player navigates the ball through the maze,
+                   parameters like taken and path taken are stored<br /><br />
+          </p>
+        </section>
+        <section data-state="IonSlide">
+          <h3 style="font-weight: bold">Graphics Pipeline</h3>
+          <img src="images/pipeline.png" />
+        </section>
+        <section data-state="IonSlide">
+          <h3 style="font-weight: bold">Further Objectives</h3>
+          <p style="text-align: left; font-weight: bold">
+            <br />
+            • Giving more control to the player - setting difficulty <br /><br />
+            • Combining different algorithms for maze generation<br /><br />
+          </p>
+      </div>
+    </div>
+    <!-- ################################################### -->
+    <!-- ################################################### -->
+    <!-- ################################################### -->
+    <!-- ################################################### -->
+    <script src="reveal.js/lib/js/head.min.js"></script>
+    <script src="reveal.js/js/reveal.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // width: 960,
+        // height:700,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        // default/cube/page/concave/zoom/linear/fade/none
+        transition: Reveal.getQueryHash().transition || "slide",
+
+        //// Optional libraries used to extend on reveal.js
+        dependencies: [
+          // { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          // { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          {
+            src: "reveal.js/plugin/notes/notes.js",
+            async: true,
+            condition: function () {
+              return !!document.body.classList;
+            },
+          },
+          { src: "reveal.js/plugin/math/math.js", async: true },
+        ],
+      });
+      Reveal.configure({
+        keyboard: {
+          32: null, // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding) document.body.style.cursor = 'none';
+        },
+      });
+    </script>
+  </body>
+</html>
